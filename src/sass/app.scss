@@ -1,0 +1,38 @@
+
+.menu-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    i {
+        padding: 2rem;
+        background-image: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+.navbar-container {
+    position: fixed;
+    top: 8rem;
+    right: 10rem;
+    width: 90%;
+    height: 50rem;
+    background-color: yellow;
+    z-index: 10;
+    transition: all linear .4s;
+}
+
+.menu-font {
+    position: fixed;
+    top: 2rem;
+    right: 7rem;
+    font-size: 6rem;
+    z-index: 1000;
+}
+
+footer {
+    height: 70rem;
+    width: 100%;
+}

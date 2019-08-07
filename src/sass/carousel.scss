@@ -1,0 +1,55 @@
+.carousel-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: all 1s ease;
+    box-shadow: 0 1.5rem 4rem rgba(black, .5);
+
+    img {
+        opacity: .7;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        animation: hello 1s ease;
+    }
+
+    i {
+        font-size: 5rem;
+        cursor: pointer;
+    }
+
+    .button-right {
+        position: absolute;
+        top: 20rem;
+        right: 2rem;
+        color: white;
+    }
+
+     .button-left {
+         position: absolute;
+         top: 20rem;
+         left: 2rem;
+         color: white;
+     }
+
+     .slide-buttons {
+         position: absolute;
+         bottom: 2rem;
+         left: 47%;
+
+         & i:not(:last-child) {
+             margin-right: .5rem;
+         }
+     }
+}
+
+@keyframes hello {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}

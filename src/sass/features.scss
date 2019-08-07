@@ -1,0 +1,52 @@
+.features-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -16rem;
+    position: relative;
+    overflow: hidden;
+    padding: 10rem 0 20rem 0;
+
+    .feature {
+        width: 30rem;
+        transition: all 4s ease;
+        height: 40rem;
+        position: relative;
+        perspective: 150rem;
+        padding: 2rem 0;
+
+        .side {
+            width: 100%;
+            position: absolute;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all .8s ease;
+            box-shadow: 0 1.5rem 4rem rgba(black, .7);
+        }
+
+        .front {
+            background-color: rgba(white, .7);
+            height: 38rem;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            // background-image: radial-gradient(
+            //     circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+                background-color: rgba(white, .7);
+            height: 38rem;
+        }
+
+        &:hover .front {
+            transform: rotateY(-180deg);
+        }
+        &:hover .back {
+            transform: rotateY(0);
+        }
+    }
+}
