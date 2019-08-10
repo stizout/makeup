@@ -101,18 +101,19 @@ header {
 
 .dropdown-container {
   position: relative; }
-  .dropdown-container:hover .dropdown-content {
+  .dropdown-container:hover .dropdown-content, .dropdown-container:active .dropdown-content {
     opacity: 1;
     height: 30rem;
-    width: 30rem; }
+    width: 30rem;
+    right: 7rem; }
 
 .dropdown-content {
   position: fixed;
-  opacity: 0;
-  right: 7rem;
+  opacity: 1;
+  right: -7rem;
   top: 8rem;
   width: 0rem;
-  height: 30rem;
+  height: 0rem;
   background-color: #a6f2ed;
   z-index: 1;
   transition: all ease .5s;
