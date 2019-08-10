@@ -12,7 +12,6 @@ export default class Home extends Component {
         return (
             <div style={{position: 'relative'}}>
                 <section className="home-container">
-                    .
                     <div  className="carousel-section">
                         <div className="carousel-parent">
                             <Carousel images={[img1,img2,img3,img4,img5]}/>

@@ -5,7 +5,6 @@
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
-    margin-top: -16rem;
     position: relative;
     overflow: hidden;
     padding: 10rem 0 20rem 0;
@@ -16,7 +15,7 @@
         height: 40rem;
         position: relative;
         perspective: 150rem;
-        padding: 2rem 0;
+        padding-top: 10rem;
 
         .side {
             width: 100%;
@@ -30,16 +29,40 @@
         }
 
         .front {
-            background-color: rgba(white, .7);
+            background: rgba($secondary-background, .5);  /* fallback for old browsers */
             height: 38rem;
+
+            h1 {
+                font-size: 3rem;
+                letter-spacing: 1.5px;
+                text-align: center;
+                margin: 1rem 0;
+            }
+
+            p {
+                font-size: 2rem;
+                text-align: center;
+            }
         }
 
         .back {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
             transform: rotateY(180deg);
-            // background-image: radial-gradient(
-            //     circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-                background-color: rgba(white, .7);
+            background-color: $primary-color;
             height: 38rem;
+
+            p {
+                font-size: 3rem;
+            }
+
+            button {
+                padding: 2rem;
+                width: 80%;
+                border-radius: 1rem;
+            }
         }
 
         &:hover .front {

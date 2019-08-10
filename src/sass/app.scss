@@ -10,6 +10,10 @@
         -webkit-background-clip: text;
         background-color: white;
         cursor: pointer;
+
+        &:hover .navbar-container {
+            opacity: 1;
+        }
     }
 }
 
@@ -17,11 +21,62 @@
     position: fixed;
     top: 8rem;
     right: 10rem;
-    width: 90%;
+    width: 30rem;
     height: 50rem;
     background-color: yellow;
     z-index: 10;
     transition: all linear .4s;
+    opacity: 0;
+
+    ul {
+        position: absolute;
+        margin: 0 auto;
+
+    }
+}
+
+header {
+    transition: all ease 2s;
+}
+
+.dropdown-container {
+    position: relative;
+
+    &:hover .dropdown-content {
+        opacity: 1;
+        height: 30rem;
+        width: 30rem;
+    }
+}
+
+.dropdown-content {
+    position: fixed;
+    opacity: 0;
+    right: 7rem;
+    top: 8rem;
+    width: 0rem;
+    height: 30rem;
+    background-color: rgba($secondary-background, 1);
+    z-index: 1;
+    transition: all ease .5s;
+    list-style-type: none;
+    text-align: center;
+    box-shadow: 0 1.5rem 4rem black;
+
+    li {
+        font-size: 4rem;
+        color: $primary-color;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        height: 25%;
+        padding: 5%;
+
+        &:hover {
+            background-color: rgba($primary-color, .3);
+            cursor: pointer;
+        }
+    }
+
 }
 
 .menu-font {
@@ -33,6 +88,26 @@
 }
 
 footer {
-    height: 70rem;
+    height: 30rem;
     width: 100%;
+    position: relative;
+
+    .footer-social-container {
+        display: flex;
+        justify-content: center;
+        font-size: 7rem;
+        padding-top: 5rem;
+        
+        i:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    p {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+    }
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    background-color: $secondary-background;
 }
